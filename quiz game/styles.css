@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0f0f1a;
+  color: #e0e0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  background-color: #1a1a2e;
+  border-radius: 1rem;
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
+  width: 100%;
+  max-width: 650px;
+  overflow: hidden;
+  position: relative;
+}
+
+.screen {
+  display: none;
+  padding: 2rem;
+  text-align: center;
+}
+
+.screen.active {
+  display: block;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+h1, h2 {
+  color: #00f5d4;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+}
+
+#start-screen p {
+  color: #aaa;
+  margin-bottom: 25px;
+  font-size: 1.1rem;
+}
+
+.quiz-info {
+  display: flex;
+  justify-content: space-between;
+  color: #aaa;
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+}
+
+.answers-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.answer-btn {
+  background-color: #22223b;
+  color: #fff;
+  border: 2px solid #4ecca3;
+  border-radius: 10px;
+  padding: 1rem;
+  cursor: pointer;
+  text-align: left;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.answer-btn:hover {
+  background-color: #393d5c;
+  transform: scale(1.02);
+}
+
+.answer-btn.correct {
+  background-color: #0f5132;
+  border-color: #00ff95;
+  color: #00ff95;
+}
+
+.answer-btn.incorrect {
+  background-color: #3d1f2f;
+  border-color: #ff4e4e;
+  color: #ff8080;
+}
+
+.progress-bar {
+  height: 12px;
+  background-color: #2b2b40;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.progress {
+  height: 100%;
+  background: linear-gradient(90deg, #00f5d4, #00bbf9);
+  width: 0%;
+  transition: width 0.4s ease;
+}
+
+#result-screen h1 {
+  margin-bottom: 25px;
+}
+
+.result-info {
+  background-color: #1f1f38;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 25px;
+  border: 1px solid #00f5d4;
+}
+
+.result-info p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+#result-message {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #00f5d4;
+}
+
+button {
+  background: linear-gradient(90deg, #00f5d4, #00bbf9);
+  color: #0f0f1a;
+  border: none;
+  border-radius: 10px;
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  font-weight: bold;
+}
+
+button:hover {
+  transform: scale(1.05);
+}

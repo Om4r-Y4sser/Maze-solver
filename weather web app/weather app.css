@@ -1,0 +1,32 @@
+/* Add to style.css */
+
+.card-custom h3 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.card-custom h2 {
+  font-size: 2.5rem;
+  margin: 10px 0;
+}
+
+.card-custom p {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+.card-custom small {
+  font-size: 0.9rem;
+  display: block;
+  margin-top: 10px;
+}
+
+.history-card p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+}
+
+.history-card p:first-child {
+  font-weight: bold;
+  font-size: 1rem;
+}
